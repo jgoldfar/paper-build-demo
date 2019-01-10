@@ -1,0 +1,21 @@
+addons:
+  apt:
+    packages:
+      - texlive-full
+      - pgf
+      - chktex
+      - aspell
+      - aspell-en
+
+matrix:
+  include:
+    - env: CHKTEX_FLAGS="-n 1 -n 8 -n 9 -n 6 -n 3 -n 17 -n 22 -n 36" BUILD=true
+    - env: CHKTEX_FLAGS="-n 6 -n 3 -n 36" BUILD=false
+  allow_failures:
+    - env: CHKTEX_FLAGS="-n 6 -n 3 -n 36" BUILD=false
+
+script:
+    - chktex -W # Print version information.
+    # chktex in precise apparently misreads dashes in references, and space-after-command compared to local.
+    - make check spellcheck CHKTEX_FLAGS=${CHKTEX_FLAGS}
+    - if [ ${BUILD} == "true" ]; then make l-check-compile; fi # Conditionally build for only one combination of env variables.

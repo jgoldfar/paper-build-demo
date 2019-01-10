@@ -1,0 +1,25 @@
+\documentclass[draft]{amsart}
+\input{preamble}
+\begin{document}
+% TITLE
+\title{}
+\author[]{}
+\date{\today}
+\maketitle
+
+\tableofcontents
+\makeatletter
+\providecommand\@dotsep{5}%chktex 21 (Plain TeX)
+\renewcommand{\listoftodos}[1][\@todonotes@todolistname]{%
+  \@starttoc{tdo}{#1}}
+\makeatother%
+%
+\listoftodos%
+
+\section{Introduction}
+% Etc...
+
+% REFERENCES
+\bibliographystyle{amsplain}
+\bibliography{refs}
+\end{document}

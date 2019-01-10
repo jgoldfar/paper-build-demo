@@ -1,0 +1,11 @@
+image: tianon/latex:latest
+
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get update
+          - apt-get install -y chktex pgf
+          - chktex -W # Print version information.
+          - make check
+          - make all

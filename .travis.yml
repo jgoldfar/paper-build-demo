@@ -17,5 +17,5 @@ matrix:
 script:
     - chktex -W # Print version information.
     # chktex in precise apparently misreads dashes in references, and space-after-command compared to local.
-    - make check spellcheck CHKTEX_FLAGS=${CHKTEX_FLAGS}
+    - make check spellcheck CHKTEX_FLAGS="${CHKTEX_FLAGS}"
     - if [ ${BUILD} == "true" ]; then make l-check-compile; fi # Conditionally build for only one combination of env variables.

@@ -4,8 +4,7 @@ pipelines:
   default:
     - step:
         script:
-          - apt-get update
-          - apt-get install -y chktex pgf
+          - apt-get update && apt-get install -y chktex pgf aspell aspell-en
           - chktex -W # Print version information.
-          - make check
-          - make all
+          - make check spellcheck
+          - make l-check-compile

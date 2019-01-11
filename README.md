@@ -1,6 +1,6 @@
 # README #
 
-[![Build Status](https://travis-ci.org/jgoldfar/paper-build-demo.svg?branch=master)](https://travis-ci.org/jgoldfar/paper-build-demo)
+[![Build Status (Github)](https://travis-ci.org/jgoldfar/paper-build-demo.svg?branch=master)](https://travis-ci.org/jgoldfar/paper-build-demo) ![Bitbucket (Git) Status](https://img.shields.io/bitbucket/pipelines/jgoldfar/git-latex-template.svg?label=Bitbucket+Pipelines+Git) ![Bitbucket (HG) Status](https://img.shields.io/bitbucket/pipelines/jgoldfar/hg-latex-template.svg?label=Bitbucket+Pipelines+HG)
 
 ## What is this repository for? ##
 
